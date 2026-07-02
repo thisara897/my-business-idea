@@ -4,12 +4,14 @@ import dns from "node:dns";
 import userRouter from './routers/userRouter.js';
 import authenticate from './middlewears/authenticate.js';
 import productRouter from './routers/productRouter.js';
+import dotenv from 'dotenv'
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
+dotenv.config()
 
-const mongoDBURI = "mongodb+srv://admin:123@cluster0.3gv4xqh.mongodb.net/?appName=Cluster0"
+const mongoDBURI = process.env.MONGO_URI
 
-mongoose.connect(mongoDBURI).then(
+mongoose.connect(mongoDBURI).then(  
     ()=> {
         console.log("mongoDB connected successfully")
     }
