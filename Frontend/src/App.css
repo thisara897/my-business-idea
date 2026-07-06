@@ -1,4 +1,7 @@
-.headline{
-  font-size: 30px;
-  color: red;
+@import "tailwindcss";
+
+@theme{
+  --color-primary : #d0e7e6;
+  --color-secondary : #293681;
+  --color-accent : #4274D9;
 }

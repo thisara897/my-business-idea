@@ -5,6 +5,7 @@ import userRouter from './routers/userRouter.js';
 import authenticate from './middlewears/authenticate.js';
 import productRouter from './routers/productRouter.js';
 import dotenv from 'dotenv'
+import cors from "cors"
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 dotenv.config()
@@ -20,6 +21,8 @@ mongoose.connect(mongoDBURI).then(
 }) //connect to the database
 
 const app = express()
+
+app.use(cors())
 
 app.use(express.json()) //middleware 
 
