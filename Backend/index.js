@@ -29,9 +29,9 @@ app.use(express.json()) //middleware
 app.use(authenticate)
 
 
-app.use("/users", userRouter)
+app.use("/api/users", userRouter)
 
-app.use("/products", productRouter)
+app.use("/api/products", productRouter)
 
 
 

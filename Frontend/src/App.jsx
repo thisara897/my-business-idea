@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='w-full h-screen'>
 
-      {/* <Toaster position='bottom-center'/> */}
+      <Toaster position='bottom-center'/>
 
       <Routes> 
         <Route path='/' element = {<Homepage/>}/>

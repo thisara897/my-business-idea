@@ -72,9 +72,13 @@ export async function loginUser(req, res) {
                 isEmailVerified: user.isEmailVerified,
                 image: user.image
             },
-            process.env.JWT_KEY // this is the token key
+            process.env.JWT_KEY ,// this is the token key
+            {
+                expiresIn : "24h"
+            }
+
         )
-        res.json({message : "Login successful", token : token})
+        res.json({message : "Login successful", token : token, isAdmin : user.isAdmin})
         console.log(token)
 
         }else{
