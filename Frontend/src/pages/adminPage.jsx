@@ -2,6 +2,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FiInbox } from "react-icons/fi";
 import { FaRegUser } from "react-icons/fa";
+import AdminProductsPage from "./admin/adminProductsPage";
 
 
 
@@ -29,7 +30,7 @@ export default function AdminPage(){
             <div className="w-[calc(100%-300px)] h-full p-4 bg-(--color-primary)">
                 <Routes>
                     <Route path="/" element={<h1>Orders Page</h1>}/>
-                    <Route path="/products" element={<h1>Products Page</h1>}/>
+                    <Route path="/products" element={<AdminProductsPage/>}/>
                     <Route path="/users" element={<h1>Users Page</h1>}/>
                 </Routes>
             </div>
